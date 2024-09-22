@@ -16,8 +16,8 @@ docker build -t leafy-front:3.0.0-proxy .
 
 # 새롭게 빌드한 이미지로 리피 애플리케이션 실행
 docker network create leafy-network
-docker run -d -name leafy-postgres -v mydata:/var/lib/postgresql/data --network leafy-network devwikirepo/leafy-postgres:1.0.0
-docker run -d -e DB_URL=leafy-postgres -name leafy --network leafy-network devwikirepo/leafy-backend:1.0.0
+docker run -d --name leafy-postgres -v mydata:/var/lib/postgresql/data --network leafy-network devwikirepo/leafy-postgres:1.0.0
+docker run -d -e DB_URL=leafy-postgres --name leafy --network leafy-network devwikirepo/leafy-backend:1.0.0
 docker run -d -p 80:80 --name leafy-front --network leafy-network leafy-front:3.0.0-proxy
 
 # 컨테이너 리스트 확인
