@@ -25,7 +25,6 @@ ls
 # 실습 디렉터리에 index.html 파일 생성
 echo "Hello Volume" > index.html 
 cat index.html
-Hello Volume 
 
 # http://localhost:8000, http://localhost:8001 접속 및 Hello Volume 페이지 확인
 

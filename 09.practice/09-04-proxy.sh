@@ -1,10 +1,10 @@
 # 변경사항 초기화 및 버전 변경
 cd ~/easydocker/leafy3/leafy-frontend
 git reset --hard HEAD && git clean -fd
-git switch 02-cache
+git switch 02-cache --force
 
 # 파일을 직접 수정하지 않을 경우 버전 변경
-git switch 03-proxy
+git switch 03-proxy --force
 
 # 파일 수정
 # ~/easydocker/leafy3/leafy-frontend/src/api/api.js

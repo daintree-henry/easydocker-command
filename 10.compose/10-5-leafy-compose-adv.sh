@@ -2,7 +2,7 @@
 cd ~/easydocker/leafy3 
 
 # 완성된 버전으로 실습을 진행하고 싶을 경우
-git switch 07-compose
+git switch 07-compose --force
 
 
 # 컴포즈 실행 및 로그 출력

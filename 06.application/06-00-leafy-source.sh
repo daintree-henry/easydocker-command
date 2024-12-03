@@ -4,7 +4,7 @@ git clone https://github.com/daintree-henry/leafy3.git
 cd leafy3 
 
 # 도커파일을 직접 작성하고 싶을 경우 
-git switch 00-init
+git switch 00-init --force
 
 # 완성된 버전으로 실습을 진행하고 싶을 경우
-git switch 01-dockerfile
+git switch 01-dockerfile --force

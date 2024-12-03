@@ -1,10 +1,10 @@
 # 변경사항 초기화 및 버전 변경
 cd ~/easydocker/leafy3/leafy-frontend
 git reset --hard HEAD && git clean -fd
-git switch 03-proxy
+git switch 03-proxy --force
 
 # 파일을 직접 수정하지 않을 경우 버전 변경
-git switch 04-dynamicconfig 
+git switch 04-dynamicconfig --force 
 
 # 파일 수정
 # ~/easydocker/leafy3/leafy-frontend/nginx.conf
@@ -30,6 +30,6 @@ docker exec leafy-front cat etc/nginx/conf.d/default.conf
 # 비밀번호: password123
 
 # 컨테이너 및 볼륨, 네트워크 삭제
-docker rm -f leafy-postgres leafy-backend leafy-front
+docker rm -f leafy-postgres leafy-dev leafy-front
 docker volume rm mydata
 docker network rm leafy-network

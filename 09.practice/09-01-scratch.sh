@@ -1,16 +1,16 @@
-# 실습폴더 이동 및 버전 변경
-cd ~/easydocker/build
-git reset --hard HEAD && git clean -fd
-git switch 02-practice
-cd 05.go-scratch
-ls 
-
 # (소스가 없을 경우)
 cd ~/easydocker
 git clone https://github.com/daintree-henry/build.git
 ls
 build
 cd build
+
+# 실습폴더 이동 및 버전 변경
+cd ~/easydocker/build
+git reset --hard HEAD && git clean -fd
+git switch 02-practice --force
+cd 05.go-scratch
+ls 
 
 # 이미지 빌드
 docker build -t helloworld .
