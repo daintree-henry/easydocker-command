@@ -16,16 +16,16 @@ cat /usr/share/nginx/html/index.html
 docker commit -m "edited index.html by devwiki" -c 'CMD ["nginx", "-g", "daemon off;"]' officialNginx (레지스트리계정명)/commitnginx
 
 # [ 2번 터미널 ] 커밋으로 생성한 이미지 확인
-docker image ls (개인레지스트리명)/commitnginx
+docker image ls (레지스트리계정명)/commitnginx
 
 # [ 2번 터미널 ] 추가된 이미지 히스토리 확인
-docker image history (개인레지스트리명)/commitnginx
+docker image history (레지스트리계정명)/commitnginx
 
 # [ 2번 터미널 ] 추가된 이미지로 컨테이너 실행
-docker run -d -p 80:80 --name my-nginx (개인레지스트리명)/commitnginx
+docker run -d -p 80:80 --name my-nginx (레지스트리계정명)/commitnginx
 
 # [ 2번 터미널 ] 실습 컨테이너 삭제
 docker rm -f officialNginx my-nginx
 
 # [ 2번 터미널 ] 실습 이미지 푸시
-docker push (개인레지스트리명)/commitnginx
+docker push (레지스트리계정명)/commitnginx
