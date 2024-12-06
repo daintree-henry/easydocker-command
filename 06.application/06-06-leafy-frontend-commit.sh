@@ -12,7 +12,7 @@ docker cp . node:/app
 # [ 1번 터미널 ] 컨테이너 내에서 복사된 소스 코드 확인 및 라이브러리 설치, 애플리케이션 빌드
 ls
 npm ci
-npm build
+npm run build
 
 # [ 1번 터미널 ] 빌드된 결과 파일 확인
 ls dist
@@ -25,7 +25,7 @@ docker cp node:/app/dist .
 docker rm -f node 
 
 # [ 1번 터미널 ] nginx 컨테이너 실행
-$ docker run -d -p 80:80 --network leafy-network --name nginx nginx
+docker run -d -p 80:80 --network leafy-network --name nginx nginx
 
 # [ 1번 터미널 ] node 컨테이너에서 빌드한 결과 파일을 nginx 컨테이너로 복사
 docker cp ~/easydocker/leafy3/leafy-frontend/dist/. nginx:/usr/share/nginx/html

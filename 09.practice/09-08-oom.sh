@@ -18,4 +18,4 @@ docker stats
 docker ps -a
 
 # [ 2번 터미널 ] 실습 컨테이너 삭제
-docker rm -f no-limit with-limit memoryuse memoryuse-withlimit
+docker rm -f memoryuse memoryuse-withlimit

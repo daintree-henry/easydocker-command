@@ -17,6 +17,7 @@ docker build -t leafy-front:3.0.0-proxy .
 # 새롭게 빌드한 이미지로 리피 애플리케이션 실행
 docker network create leafy-network
 docker run -d --name leafy-postgres -v mydata:/var/lib/postgresql/data --network leafy-network devwikirepo/leafy-postgres:1.0.0
+# 약 20초 뒤 실행
 docker run -d -e DB_URL=leafy-postgres --name leafy --network leafy-network devwikirepo/leafy-backend:1.0.0
 docker run -d -p 80:80 --name leafy-front --network leafy-network leafy-front:3.0.0-proxy
 
@@ -27,6 +28,6 @@ docker ps
 # http://localhost 접속  페이지 확인
 
 # 컨테이너 및 볼륨, 네트워크 삭제
-docker rm -f leafy-postgres leafy-backend leafy-front
+docker rm -f leafy-postgres leafy leafy-front
 docker volume rm mydata
 docker network rm leafy-network

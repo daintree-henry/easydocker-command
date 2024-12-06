@@ -33,7 +33,6 @@ docker exec -it nginx-a /bin/bash
 
 # nginx-a 컨테이너 내부에서 index.html 파일의 내용 확인
 ls /usr/share/nginx/html
-index.html
 cat /usr/share/nginx/html/index.html
 
 # nginx-a 컨테이너 내부에서 index.html 파일의 내용 변경
@@ -45,3 +44,6 @@ exit
 cat index.html
 
 # http://localhost:8000, http://localhost:8001 접속 및 Bye Volume 페이지 확인
+
+# 실습 디렉터리 제거
+rm -rf ~/easydocker/index

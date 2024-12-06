@@ -4,7 +4,6 @@ docker network ls
 # [ 1번 터미널 ] bridge 리스트 상세 조회 및 second-bridge 네트워크 생성
 docker network inspect bridge
 docker network create --driver bridge --subnet 10.0.0.0/24 --gateway 10.0.0.1 second-bridge
-(생성된 네트워크의 ID 출력)
 
 # [ 1번 터미널 ] 생성된 네트워크 확인
 docker network ls
@@ -28,13 +27,16 @@ docker container inspect ubuntuB | grep "IPAddress"
 docker container inspect ubuntuC | grep "IPAddress"
 
 # [ 2번 터미널 ] ubuntuB -> ubuntuA 로 신호 
-ping 172.17.0.2 (ubuntuA 컨테이너의IP, 다를 경우 위에서 확인한 IP로 수정)
+ping 172.17.0.2
+(ubuntuA 컨테이너의IP, 다를 경우 위에서 확인한 IP로 수정)
 
 # [ 2번 터미널 ] ubuntuB -> ubuntuC 로 신호 
-ping 10.0.0.2 (ubuntuC 컨테이너의IP, 다를 경우 위에서 확인한 IP로 수정)
+ping 10.0.0.2
+(ubuntuC 컨테이너의IP, 다를 경우 위에서 확인한 IP로 수정)
 
 # [ 3번 터미널 ] ubuntuC -> ubuntuA 로 신호 
-ping 172.17.0.2 (ubuntuA 컨테이너의IP, 다를 경우 위에서 확인한 IP로 수정)
+ping 172.17.0.2 
+(ubuntuA 컨테이너의IP, 다를 경우 위에서 확인한 IP로 수정)
 
 # [ 1번 터미널 ] 실습에 사용한 컨테이너 및 네트워크 제거
 docker rm -f ubuntuA ubuntuB ubuntuC
