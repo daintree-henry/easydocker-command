@@ -28,7 +28,8 @@ docker rm -f node
 docker run -d -p 80:80 --network leafy-network --name nginx nginx
 
 # [ 1번 터미널 ] node 컨테이너에서 빌드한 결과 파일을 nginx 컨테이너로 복사
-docker cp ~/easydocker/leafy3/leafy-frontend/dist/. nginx:/usr/share/nginx/html
+cd ~/easydocker/leafy3/leafy-frontend/dist
+docker cp . nginx:/usr/share/nginx/html
 
 # http://localhost로 접속해 로그인 페이지를 확인
 # 아이디: john123@qmail.com

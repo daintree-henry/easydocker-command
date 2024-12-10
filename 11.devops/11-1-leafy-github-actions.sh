@@ -1,6 +1,7 @@
 # 소스 코드 다운로드
 cd ~/easydocker
-mkdir my-leafy && cd my-leafy
+mkdir my-leafy
+cd my-leafy
 git clone (포크한 깃허브 레파지토리 주소) . 
 ls -a
 

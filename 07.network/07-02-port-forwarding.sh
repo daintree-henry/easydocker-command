@@ -1,8 +1,8 @@
 # 포트포워딩 없이 nginx 컨테이너 실행
 docker run -d --name nginx nginx
 
-# 컨테이너의 IP 확인
-docker inspect nginx | grep "IPAddress"
+# 컨테이너의 IP 확인 (IPAddress 필드)
+docker inspect nginx 
 
 # 8001:80 으로 nginx 컨테이너 실행
 docker run -d -p 8001:80 --name nginx2 nginx

@@ -1,5 +1,5 @@
 # [ 1번 터미널 ] gradle, jdk가 구성된 이미지로 컨테이너 실행, 셸 접근
-docker run -it --name gradle --network leafy-network gradle:7.6.1-jdk17 bash
+docker run -it --name gradle --network leafy-network gradle:7.6.1-jdk17 /bin/bash
 
 # [ 1번 터미널 ] 컨테이너 내에서 디렉터리 생성 및 이동
 mkdir /app && cd /app

@@ -1,6 +1,6 @@
 # [ 1번 터미널 ] postgres:13 이미지로 컨테이너 실행 및 터미널 접근
 docker run -d --name postgres -e POSTGRES_PASSWORD=password postgres:13
-docker exec -it postgres bin/bash
+docker exec -it postgres /bin/bash
 
 # [ 1번 터미널 ] 컨테이너 내 파일 구조 확인
 ls

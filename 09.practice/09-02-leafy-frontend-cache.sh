@@ -1,6 +1,7 @@
 # 변경사항 초기화 및 버전 변경
 cd ~/easydocker/leafy3
-git reset --hard HEAD && git clean -fd
+git reset --hard HEAD
+git clean -fd
 git switch 01-dockerfile --force
 
 # leafy-frontend 디렉터리 이동 및 첫 빌드

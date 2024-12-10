@@ -1,6 +1,7 @@
 # 실습 폴더 생성 및 이동
 cd ~/easydocker
-mkdir index && cd index
+mkdir index
+cd index
 
 # 실습 폴더의 절대 경로 확인
 pwd
@@ -45,5 +46,8 @@ cat index.html
 
 # http://localhost:8000, http://localhost:8001 접속 및 Bye Volume 페이지 확인
 
-# 실습 디렉터리 제거
-rm -rf ~/easydocker/index
+# 실습 컨테이너 및 디렉터리 제거
+docker rm -f nginx-a nginx-b
+cd ~/easydocker
+rm index/index.html
+rm -r index

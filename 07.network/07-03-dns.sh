@@ -19,7 +19,7 @@ ping containerB
 
 # [ 2번 터미널 ] containerB 컨테이너 실행 및 IP 주소 확인
 docker run -d --network second-bridge --name containerB devwikirepo/pingbuntu
-docker inspect containerB | grep "IPAddress" 
+docker inspect containerB
 
 # [ 1번 터미널 ] 컨테이너 내에서 containerB로 ping 확인(정상, Ctrl + C로 종료)
 ping containerB

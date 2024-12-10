@@ -1,6 +1,7 @@
 # 변경사항 초기화 및 버전 변경
 cd ~/easydocker/leafy3/leafy-frontend
-git reset --hard HEAD && git clean -fd
+git reset --hard HEAD
+git clean -fd
 git switch 02-cache --force
 
 # 파일을 직접 수정하지 않을 경우 버전 변경

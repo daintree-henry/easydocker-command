@@ -7,7 +7,8 @@ cd build
 
 # 실습폴더 이동 및 버전 변경
 cd ~/easydocker/build
-git reset --hard HEAD && git clean -fd
+git reset --hard HEAD
+git clean -fd
 git switch 02-practice --force
 cd 05.go-scratch
 ls 

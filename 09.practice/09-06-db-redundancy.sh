@@ -1,6 +1,7 @@
 # 변경사항 초기화 및 버전 변경
 cd ~/easydocker/leafy3/leafy-postgresql
-git reset --hard HEAD && git clean -fd
+git reset --hard HEAD
+git clean -fd
 git switch 05-redundancy --force
 
 # postgres 네트워크 생성

@@ -1,6 +1,7 @@
 # 실습 폴더 및 index.html 파일 생성
 cd ~/easydocker 
-mkdir index && cd index
+mkdir index 
+cd index
 echo “Hello Volume” > index.html
 cat index.html
 ls 
@@ -25,4 +26,6 @@ cat index-from-container.html
 
 docker rm -f my-nginx
 cd ~/easydocker
-rm -rf index 
+rm index.html 
+rm index-from-container.html 
+rm -r index 

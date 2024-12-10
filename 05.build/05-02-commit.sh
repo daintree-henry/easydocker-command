@@ -1,6 +1,6 @@
 # [ 1번 터미널 ] 컨테이너 실행 및 배쉬 셸 접근
 docker run -d --name officialNginx nginx 
-docker exec -it officialNginx bin/bash 
+docker exec -it officialNginx /bin/bash 
 
 # [ 2번 터미널 ] 컨테이너 상태 확인
 docker ps 
@@ -13,7 +13,7 @@ echo hello-my-nginx > /usr/share/nginx/html/index.html
 cat /usr/share/nginx/html/index.html
 
 # [ 2번 터미널 ] 컨테이너 커밋
-docker commit -m "edited index.html by devwiki" -c 'CMD ["nginx", "-g", "daemon off;"]' officialNginx (레지스트리계정명)/commitnginx
+docker commit -m "edited index.html by devwiki" -c "CMD ['nginx', '-g', 'daemon off;']" officialNginx (레지스트리계정명)/commitnginx
 
 # [ 2번 터미널 ] 커밋으로 생성한 이미지 확인
 docker image ls (레지스트리계정명)/commitnginx

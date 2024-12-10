@@ -7,7 +7,8 @@ cd build
 
 # 실습 폴더 이동 및 변경 사항 초기화
 cd ~/easydocker/build
-git reset --hard HEAD && git clean -fd
+git reset --hard HEAD
+git clean -fd
 git switch 02-practice --force
 cd 07.hitchecker   
 

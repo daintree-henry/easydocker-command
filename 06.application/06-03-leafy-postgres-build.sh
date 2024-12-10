@@ -22,7 +22,6 @@ SELECT * FROM users;
 SELECT * FROM plants;
 SELECT * FROM user_plants;
 SELECT * FROM plant_logs;
-\q
 exit
 
 # 이미지 히스토리 조회

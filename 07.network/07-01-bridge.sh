@@ -13,18 +13,18 @@ docker network inspect second-bridge
 docker run -d --name ubuntuA devwikirepo/pingbuntu
 
 # [ 2번 터미널 ] ubuntuB 컨테이너 실행 및 터미널 접근
-docker run -it --name ubuntuB devwikirepo/pingbuntu bin/bash
+docker run -it --name ubuntuB devwikirepo/pingbuntu /bin/bash
 
 # [ 3번 터미널 ] ubuntuC 컨테이너 실행 및 터미널 접근
-docker run -it --network second-bridge --name ubuntuC devwikirepo/pingbuntu bin/bash
+docker run -it --network second-bridge --name ubuntuC devwikirepo/pingbuntu /bin/bash
 
 # [ 1번 터미널 ] 실행된 3개의 컨테이너 리스트 확인
 docker ps
 
-# [ 1번 터미널 ] 각 컨테이너들의 IP 확인
-docker container inspect ubuntuA | grep "IPAddress"
-docker container inspect ubuntuB | grep "IPAddress"
-docker container inspect ubuntuC | grep "IPAddress"
+# [ 1번 터미널 ] 각 컨테이너들의 IP 확인(IPAddress 필드)
+docker container inspect ubuntuA
+docker container inspect ubuntuB
+docker container inspect ubuntuC
 
 # [ 2번 터미널 ] ubuntuB -> ubuntuA 로 신호 
 ping 172.17.0.2

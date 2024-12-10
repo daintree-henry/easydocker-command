@@ -2,5 +2,5 @@
 cd ~/easydocker/build/02.buildcontext
 docker build -t buildcontext:ignorejunk .
 
-rm -rf .dockerignore
+rm .dockerignore
 docker build -t buildcontext:ignorejunk .
