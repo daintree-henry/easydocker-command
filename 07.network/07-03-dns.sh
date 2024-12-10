@@ -9,7 +9,7 @@ docker network create --driver bridge --subnet 10.0.0.0/24 second-bridge
 docker network ls 
 
 # [ 1번 터미널 ] containerA 실행 및 터미널 접근
-docker run -it --network second-bridge --name containerA devwikirepo/pingbuntu bin/bash
+docker run -it --network second-bridge --name containerA devwikirepo/pingbuntu /bin/bash
 
 # [ 1번 터미널 ] 컨테이너 내에서 DNS 설정 정보 확인
 cat /etc/resolv.conf
