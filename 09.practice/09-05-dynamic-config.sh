@@ -24,7 +24,7 @@ docker run -d -e DB_URL=leafy-postgres --name leafy-dev --network leafy-network 
 docker run -d -e BACKEND_HOST=leafy-dev -p 80:80 --name leafy-front --network leafy-network leafy-front:4.0.0-env
 
 # 실제 적용된 nginx.conf 파일 내용 확인
-docker exec leafy-front cat etc/nginx/conf.d/default.conf
+docker exec leafy-front cat /etc/nginx/conf.d/default.conf
 
 # http://localhost 접근
 # 아이디: john123@qmail.com
