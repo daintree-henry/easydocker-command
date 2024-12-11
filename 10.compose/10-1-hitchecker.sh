@@ -1,8 +1,6 @@
 # (build 소스가 없을 경우)
 cd ~/easydocker
 git clone https://github.com/daintree-henry/build.git
-ls
-build
 cd build
 
 # 실습 폴더 이동 및 변경 사항 초기화
