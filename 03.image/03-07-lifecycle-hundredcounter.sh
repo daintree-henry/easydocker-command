@@ -25,6 +25,7 @@ docker logs hundredcounter
 
 # [ 1번 터미널 ] 컨테이너 로그 지속적으로 출력(Ctrl + C로 종료)
 docker logs -f hundredcounter
+docker ps
 
 # [ 1번 터미널 ] 컨테이너 삭제
 docker rm -f hundredcounter

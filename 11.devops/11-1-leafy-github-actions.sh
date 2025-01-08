@@ -35,7 +35,7 @@ git push
 # 변경사항 커밋 및 푸시
 cd ~/easydocker/my-leafy
 git add .
-git commit -m "계정 정보 변경"
+git commit -m "로그인 아이디 변경"
 git push  
 
 # 파이프라인에서 푸시한 이미지로 컴포즈 실행

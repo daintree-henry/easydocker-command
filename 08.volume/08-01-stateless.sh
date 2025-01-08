@@ -2,7 +2,7 @@
 cd ~/easydocker 
 mkdir index 
 cd index
-echo “Hello Volume” > index.html
+echo "Hello Volume" > index.html
 cat index.html
 ls 
 
